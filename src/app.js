@@ -2,8 +2,8 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+//import "./assets/img/rigo-baby.jpg";
+//import "./assets/img/4geeks.ico";
 
 window.onload = function getDomain() {
   //write your code here
@@ -13,44 +13,40 @@ window.onload = function getDomain() {
   let extensions = [".com", ".net", ".us", ".io", ".org"];
   let domainHacks = [".bad", ".help", ".notsure", ".vacation"];
 
-  /*function setElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }*/
   let domainName = [];
   for (let pronoun of pronouns) {
     for (let adjective of adjectives) {
       for (let noun of nouns) {
         for (let extension of extensions) {
-          domainName.push(`${pronoun}${adjective}${noun}${extension}`);
-
+          let domainName = pronoun + adjective + noun + extension;
           //this will print Domain Names to the console
           console.log(domainName);
         }
       }
     }
   }
-  //trying my luck at adding the domain hack
-
   let domainHackName = [];
   for (let pronoun of pronouns) {
     for (let adjective of adjectives) {
       for (let noun of nouns) {
         for (let extension of extensions) {
           for (let hack of domainHacks) {
-            domainHackName.push(
-              `${pronoun}${adjective}${noun}${extension}${hack}`
-            );
+            let domainHackName = pronoun + adjective + noun + extension + hack;
+            //this will print Domain Names to the console
             console.log(domainHackName);
-
-            document.body.innerHTML = `<ul>${domainName.map(
-              domainName => `<li>${domainName}</li>`
-            )}</ul>`;
-            document.body.innerHTML = `<ul>${domainHackName.map(
-              domainHackName => `<li>${domainHackName}</li>`
-            )}</ul>`;
           }
         }
       }
     }
   }
+const myDOMDomain[0].getElementById = domainName;
+myDomDomain[0].innerText = getDomain;
+console.log(myDOMDomain[0]);
+
+  /*document.getElementById.domainName = `<ul>${domainName.map(
+    domainName => `<li>${domainName}</li>`
+  )}</ul>`;
+  document.getElementById.domainHacks = `<ul>${domainHacks.map(
+    domainHacks => `<li>${domainHacks}</li>`
+  )}</ul>`;*/
 };
